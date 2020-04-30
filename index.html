@@ -2,15 +2,6 @@
 <html lang="fa">
 
 <head>
-    <script>
-        (function() {
-            var redirect = sessionStorage.redirect;
-            delete sessionStorage.redirect;
-            if (redirect && redirect != location.href) {
-                history.replaceState(null, null, redirect);
-            }
-        })();
-    </script>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title>مستندات داکیوت فارسی</title>
@@ -25,7 +16,7 @@
         new Docute({
             target: '#docute',
             title: 'مستندات داکیوت فارسی',
-            highlight: ['javascript'],
+            highlight: ['css','markdown'],
             router: {
                 mode: 'history'
             },
