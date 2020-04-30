@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <script>
+        (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>مستندات داکیوت فارسی</title>
+    <link href="https://unpkg.com/docute-fa@0.1.7/dist/docute.css" rel="stylesheet">
+    <link href="style/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="docute"></div>
+    <script src="https://unpkg.com/docute-fa@0.1.7/dist/docute.js"></script>
+    <script>
+        new Docute({
+            target: '#docute',
+            title: 'مستندات داکیوت فارسی',
+            highlight: ['javascript'],
+            router: {
+                mode: 'history'
+            },
+            detectSystemDarkTheme: true,
+            darkThemeToggler: true,
+            sourcePath: '/docs',
+            editLinkBase: 'https://github.com/sadraiiali/docute-fa-documentation/tree/master/docs',
+            editLinkText: 'این صفحه را در گیت‌هاب ویرایش کنید.',
+            sidebar: [{
+                title: 'راهنما',
+                children: [{
+                    title: 'مقدمه',
+                    link: '/intro'
+                }]
+            },{
+                title: 'پیشرفته',
+                children: []
+            },{
+                title: 'منابع',
+                children: []
+            }, {
+                title: 'پس‌گفتار',
+                link: '/credits'
+            }, 
+            ],
+            footer: `
+          <div style="border-top:1px solid var(--border-color);padding-top:30px;margin: 40px 0;color:#999999;font-size: .9rem;">
+          &copy; ${new Date().getFullYear()}.
+           ساخته شده با ❤️ در
+           <a href="https://kn2c.ir" target="_blank">
+           KN2C Robotics Lab.</a>
+
+            بوسیله‌ی
+            <a href="https://github.com/sadraiiali/docute-fa">داکیوت فارسی</a>
+             </div>
+          `
+        })
+    </script>
+</body>
+
+</html>
