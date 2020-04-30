@@ -7,6 +7,8 @@
 ## مشارکت کنندگان
 
 - [علیرضا صدرایی راد](https://github.com/sadraiiali)
+- [امیر](https://github.com/amkyp)
+
 
 ## شیوه‌ی مشارکت
 
